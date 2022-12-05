@@ -1,0 +1,7 @@
+zendesk_support.group Billing {
+  is_public = true
+  name = "Billing"
+  description = ""
+  default = false
+  deleted = false
+}
