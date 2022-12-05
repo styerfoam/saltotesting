@@ -1,0 +1,10 @@
+zendesk_support.oauth_client salto_testing {
+  name = "Salto Testing"
+  identifier = "salto_testing"
+  company = "IH8K8Club"
+  description = ""
+  redirect_uri = [
+    "http://localhost:112",
+  ]
+  global = false
+}

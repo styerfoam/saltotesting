@@ -1,0 +1,15 @@
+envs {
+  envs = [
+    {
+      name = "ih8k8clubzen"
+      accountToServiceName = {
+        zendesk_support = "zendesk_support"
+      }
+    },
+    {
+      name = "dev"
+      accountToServiceName = {
+      }
+    },
+  ]
+}

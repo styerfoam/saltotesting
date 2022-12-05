@@ -1,0 +1,6 @@
+zendesk_support.workspace_order {
+  active = [
+  ]
+  inactive = [
+  ]
+}
