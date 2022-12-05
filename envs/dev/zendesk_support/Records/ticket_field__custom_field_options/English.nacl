@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options Language_tagger__lang_en@uuub {
+  name = "English"
+  raw_name = "English"
+  value = "lang-en"
+  _parent = [
+    zendesk_support.ticket_field.instance.Language_tagger,
+  ]
+}

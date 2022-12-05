@@ -1,0 +1,9 @@
+zendesk_support.automation_order {
+  active = [
+    zendesk_support.automation.instance.Close_ticket_4_days_after_status_is_set_to_solved@s,
+  ]
+  inactive = [
+    zendesk_support.automation.instance.Pending_notification_24_hours@s,
+    zendesk_support.automation.instance.Pending_notification_5_days@s,
+  ]
+}

@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options Language_tagger__lang_fr@uuub {
+  name = "French"
+  raw_name = "French"
+  value = "lang-fr"
+  _parent = [
+    zendesk_support.ticket_field.instance.Language_tagger,
+  ]
+}

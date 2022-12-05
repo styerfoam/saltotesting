@@ -1,0 +1,8 @@
+zendesk_support.business_hours_schedule_holiday Canada_Pacific_Business_Hours_s__Christmas_Day@uuumuus {
+  name = "Christmas Day"
+  start_date = "2022-12-25"
+  end_date = "2022-12-26"
+  _parent = [
+    zendesk_support.business_hours_schedule.instance.Canada_Pacific_Business_Hours@s,
+  ]
+}

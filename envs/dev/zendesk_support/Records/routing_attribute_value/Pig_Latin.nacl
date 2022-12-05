@@ -1,0 +1,15 @@
+zendesk_support.routing_attribute_value Language__Pig_Latin@uus {
+  name = "Pig Latin"
+  conditions = {
+    all = [
+      {
+        subject = zendesk_support.ticket_field.instance.Language_tagger
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_pgltn@uuub
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Language,
+  ]
+}

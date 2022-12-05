@@ -1,0 +1,23 @@
+zendesk_support.ticket_field Language_tagger {
+  type = "tagger"
+  title = "Language"
+  raw_title = "Language"
+  description = ""
+  raw_description = ""
+  active = true
+  required = true
+  collapsed_for_agents = false
+  title_in_portal = "Language"
+  raw_title_in_portal = "Language"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+  agent_description = "Preferred language of requestor"
+  custom_field_options = [
+    zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_en@uuub,
+    zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_fr@uuub,
+    zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_pgltn@uuub,
+  ]
+  default_custom_field_option = zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_en@uuub
+}

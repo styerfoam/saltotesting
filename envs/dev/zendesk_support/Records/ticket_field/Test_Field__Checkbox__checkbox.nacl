@@ -1,0 +1,17 @@
+zendesk_support.ticket_field Test_Field__Checkbox__checkbox@ssjku {
+  type = "checkbox"
+  title = "Test Field (Checkbox)"
+  raw_title = "Test Field (Checkbox)"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Test Field (Checkbox)"
+  raw_title_in_portal = "Test Field (Checkbox)"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  tag = "check_yes"
+  removable = true
+}

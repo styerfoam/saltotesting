@@ -1,0 +1,14 @@
+zendesk_support.routing_attribute_value Language__German {
+  name = "German"
+  conditions = {
+    any = [
+      {
+        subject = zendesk_support.ticket_field.instance.Language_tagger
+        operator = "is"
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Language,
+  ]
+}

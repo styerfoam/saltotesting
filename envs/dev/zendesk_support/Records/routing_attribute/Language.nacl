@@ -1,0 +1,9 @@
+zendesk_support.routing_attribute Language {
+  name = "Language"
+  values = [
+    zendesk_support.routing_attribute_value.instance.Language__English,
+    zendesk_support.routing_attribute_value.instance.Language__French,
+    zendesk_support.routing_attribute_value.instance.Language__German,
+    zendesk_support.routing_attribute_value.instance.Language__Pig_Latin@uus,
+  ]
+}

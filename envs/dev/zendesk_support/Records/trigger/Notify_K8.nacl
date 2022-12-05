@@ -1,0 +1,52 @@
+zendesk_support.trigger Notify_K8@s {
+  title = "Notify K8"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "remove_tags"
+      value = [
+        zendesk_support.tag.instance.add_k8_test_cc,
+      ]
+    },
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.update_many_endpoint@us,
+        '''
+{"ticket": {
+		"comment": {
+			"html_body": "<p>Looping in K8 Test for Urgent priority visibility. Please see below. Thank you!<\/p><table style=\"width:100%; border: 1px solid black;\"><tr><td style=\"border: 1px solid black;\">Film title: <\/td><td style=\"border: 1px solid black;\">{{ticket.ticket_field_option_title_9436135459611}}<\/td><\/tr><tr><td style=\"border: 1px solid black;\">Item for approval: <\/td><td style=\"border: 1px solid black;\">{{ticket.ticket_field_option_9436198640667}}<\/td><\/tr><\/table>",
+			"public": true
+		},
+		"additional_tags": ["notify_k8_test_cc"]
+	}
+}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "status"
+        operator = "is_not"
+        value = "solved"
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk_support.tag.instance.add_k8_test_cc,
+        ]
+      },
+    ]
+  }
+  raw_title = "Notify K8"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

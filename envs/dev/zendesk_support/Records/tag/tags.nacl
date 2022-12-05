@@ -1,0 +1,9 @@
+zendesk_support.tag add_k8_test_cc {
+  id = "add_k8_test_cc"
+}
+zendesk_support.tag dannotified {
+  id = "dannotified"
+}
+zendesk_support.tag test_trigger {
+  id = "test_trigger"
+}

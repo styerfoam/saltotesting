@@ -1,0 +1,68 @@
+zendesk_support.ticket_field Ticket_status_custom_status@suu {
+  type = "custom_status"
+  title = "Ticket status"
+  raw_title = "Ticket status"
+  description = "Request ticket status"
+  raw_description = "Request ticket status"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Ticket status"
+  raw_title_in_portal = "Ticket status"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = false
+  custom_statuses = [
+    {
+      id = 6925575896859
+      status_category = "new"
+      agent_label = "New"
+      end_user_label = "Open"
+      description = "Ticket is awaiting assignment to an agent"
+      end_user_description = "We are working on a response for you"
+      active = true
+      default = true
+    },
+    {
+      id = 6925598454299
+      status_category = "open"
+      agent_label = "Open"
+      end_user_label = "Open"
+      description = "Staff is working on the ticket"
+      end_user_description = "We are working on a response for you"
+      active = true
+      default = true
+    },
+    {
+      id = 6925612664219
+      status_category = "pending"
+      agent_label = "Pending"
+      end_user_label = "Awaiting your reply"
+      description = "Staff is waiting for the requester to reply"
+      end_user_description = "We are waiting for you to respond"
+      active = true
+      default = true
+    },
+    {
+      id = 6925575900699
+      status_category = "hold"
+      agent_label = "On-hold"
+      end_user_label = "Open"
+      description = "Staff is waiting for a third party"
+      end_user_description = "We are working on a response for you"
+      active = true
+      default = true
+    },
+    {
+      id = 6925598455963
+      status_category = "solved"
+      agent_label = "Solved"
+      end_user_label = "Solved"
+      description = "The ticket has been solved"
+      end_user_description = "This request has been solved"
+      active = true
+      default = true
+    },
+  ]
+}

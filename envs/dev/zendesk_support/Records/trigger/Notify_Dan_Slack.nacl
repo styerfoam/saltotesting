@@ -1,0 +1,44 @@
+zendesk_support.trigger Notify_Dan_Slack@b {
+  title = "Notify-Dan-Slack"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.Notiffy_Dan_Slack@b,
+        "{\"text\":\"Dan, this to let you know ticket #{{ticket.id}} ({{ticket.external_id}}) from {{ticket.requester.name}} has been assigned to you. <{{ticket.url}}><{{ticket.via}}>\"}",
+      ]
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk_support.tag.instance.dannotified,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "assignee_id"
+        operator = "value"
+        value = "variablesymmetry@gmail.com"
+      },
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = [
+          zendesk_support.tag.instance.dannotified,
+        ]
+      },
+    ]
+  }
+  description = "Notifies Dan via slack on ticket assignment"
+  raw_title = "Notify-Dan-Slack"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

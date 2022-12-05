@@ -1,0 +1,52 @@
+zendesk_support.trigger Add_K8_Test_to_Ticket_@s {
+  title = "Add K8 Test to Ticket "
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.update_many_endpoint@us,
+        '''
+{
+  "ticket": {
+  	"additional_tags":["add_k8_test_cc"],
+    "email_ccs": [
+      { "user_id": "9434116024603", "action": "put" }
+    ]
+  }
+ }
+''',
+      ]
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk_support.tag.instance.test_trigger,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk_support.group.instance.Support
+      },
+    ]
+    any = [
+      {
+        field = "priority"
+        operator = "is"
+        value = "urgent"
+      },
+    ]
+  }
+  raw_title = "Add K8 Test to Ticket "
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

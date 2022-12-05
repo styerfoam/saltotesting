@@ -1,0 +1,15 @@
+zendesk_support.routing_attribute_value Technical_Ability_s__Grandparent@umuu {
+  name = "Grandparent"
+  conditions = {
+    all = [
+      {
+        subject = "priority"
+        operator = "less_than"
+        value = "high"
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Technical_Ability@s,
+  ]
+}

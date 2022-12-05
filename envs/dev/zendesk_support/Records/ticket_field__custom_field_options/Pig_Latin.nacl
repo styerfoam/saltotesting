@@ -1,0 +1,8 @@
+zendesk_support.ticket_field__custom_field_options Language_tagger__lang_pgltn@uuub {
+  name = "Pig Latin"
+  raw_name = "Pig Latin"
+  value = "lang-pgltn"
+  _parent = [
+    zendesk_support.ticket_field.instance.Language_tagger,
+  ]
+}

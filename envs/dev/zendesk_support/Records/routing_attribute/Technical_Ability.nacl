@@ -1,0 +1,8 @@
+zendesk_support.routing_attribute Technical_Ability@s {
+  name = "Technical Ability"
+  values = [
+    zendesk_support.routing_attribute_value.instance.Technical_Ability_s__Expert@umuu,
+    zendesk_support.routing_attribute_value.instance.Technical_Ability_s__Grandparent@umuu,
+    zendesk_support.routing_attribute_value.instance.Technical_Ability_s__Novice@umuu,
+  ]
+}

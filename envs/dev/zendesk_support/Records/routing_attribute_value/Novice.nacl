@@ -1,0 +1,6 @@
+zendesk_support.routing_attribute_value Technical_Ability_s__Novice@umuu {
+  name = "Novice"
+  _parent = [
+    zendesk_support.routing_attribute.instance.Technical_Ability@s,
+  ]
+}

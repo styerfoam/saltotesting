@@ -1,0 +1,11 @@
+zendesk_support.webhook Notiffy_Dan_Slack@b {
+  name = "Notiffy-Dan-Slack"
+  description = "Notifies Dan via slack when tickets are assigned to his email"
+  status = "active"
+  subscriptions = [
+    "conditional_ticket_events",
+  ]
+  endpoint = "https://hooks.slack.com/services/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"
+  http_method = "PUT"
+  request_format = "json"
+}

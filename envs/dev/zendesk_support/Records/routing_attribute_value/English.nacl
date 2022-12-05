@@ -1,0 +1,15 @@
+zendesk_support.routing_attribute_value Language__English {
+  name = "English"
+  conditions = {
+    all = [
+      {
+        subject = zendesk_support.ticket_field.instance.Language_tagger
+        operator = "is"
+        value = zendesk_support.ticket_field__custom_field_options.instance.Language_tagger__lang_en@uuub
+      },
+    ]
+  }
+  _parent = [
+    zendesk_support.routing_attribute.instance.Language,
+  ]
+}

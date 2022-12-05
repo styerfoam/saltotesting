@@ -1,0 +1,16 @@
+zendesk_support.ticket_field Test_Field__Text__text@ssjku {
+  type = "text"
+  title = "Test Field (Text)"
+  raw_title = "Test Field (Text)"
+  description = ""
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  title_in_portal = "Test Field (Text)"
+  raw_title_in_portal = "Test Field (Text)"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  removable = true
+}

@@ -1,0 +1,26 @@
+zendesk_support.business_hours_schedule N_America_Pacific_Business_Hours@vsss {
+  name = "N.America Pacific Business Hours"
+  time_zone = "Pacific Time (US & Canada)"
+  intervals = [
+    {
+      start_time = 1980
+      end_time = 2460
+    },
+    {
+      start_time = 3420
+      end_time = 3900
+    },
+    {
+      start_time = 4860
+      end_time = 5340
+    },
+    {
+      start_time = 6300
+      end_time = 6780
+    },
+    {
+      start_time = 7740
+      end_time = 8220
+    },
+  ]
+}

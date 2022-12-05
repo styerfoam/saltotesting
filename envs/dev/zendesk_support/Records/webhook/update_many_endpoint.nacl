@@ -1,0 +1,18 @@
+zendesk_support.webhook update_many_endpoint@us {
+  name = "update_many endpoint"
+  description = ""
+  status = "active"
+  subscriptions = [
+    "conditional_ticket_events",
+  ]
+  endpoint = "https://d3v-ih8k8club.zendesk.com/api/v2/tickets/update_many.json?ids={{ticket.id}}"
+  http_method = "PUT"
+  request_format = "json"
+  authentication = {
+    type = "basic_auth"
+    data = {
+      username = "tech@katestyer.monster/token"
+    }
+    add_position = "header"
+  }
+}

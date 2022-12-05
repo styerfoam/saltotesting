@@ -1,0 +1,30 @@
+zendesk_support.trigger attachmentID {
+  title = "attachmentID"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk_support.webhook.instance.Attachment_ID_Test_Hook@s,
+        [
+          [
+            "{{ticket.id}}",
+            "",
+          ],
+        ],
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+    ]
+  }
+  raw_title = "attachmentID"
+  category_id = zendesk_support.trigger_category.instance.Notifications
+}

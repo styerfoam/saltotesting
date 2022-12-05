@@ -1,0 +1,26 @@
+zendesk_support.business_hours_schedule N_America_Pacific_Evening_Shift@vsss {
+  name = "N.America Pacific Evening Shift"
+  time_zone = "Pacific Time (US & Canada)"
+  intervals = [
+    {
+      start_time = 2400
+      end_time = 2640
+    },
+    {
+      start_time = 3840
+      end_time = 4080
+    },
+    {
+      start_time = 5280
+      end_time = 5520
+    },
+    {
+      start_time = 6720
+      end_time = 6960
+    },
+    {
+      start_time = 8160
+      end_time = 8400
+    },
+  ]
+}

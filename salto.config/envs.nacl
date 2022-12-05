@@ -9,6 +9,7 @@ envs {
     {
       name = "dev"
       accountToServiceName = {
+        zendesk_support = "zendesk_support"
       }
     },
   ]

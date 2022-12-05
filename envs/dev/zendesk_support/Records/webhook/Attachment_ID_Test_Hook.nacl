@@ -1,0 +1,18 @@
+zendesk_support.webhook Attachment_ID_Test_Hook@s {
+  name = "Attachment ID Test Hook"
+  description = ""
+  status = "active"
+  subscriptions = [
+    "conditional_ticket_events",
+  ]
+  endpoint = "https://d3v-ih8k8club.zendesk.com/api/v2/attachments/{{attachment_id}}"
+  http_method = "GET"
+  request_format = "json"
+  authentication = {
+    type = "basic_auth"
+    data = {
+      username = "tech@katestyer.monster/token"
+    }
+    add_position = "header"
+  }
+}
