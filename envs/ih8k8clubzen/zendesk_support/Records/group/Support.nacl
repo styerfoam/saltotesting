@@ -1,7 +1,0 @@
-zendesk_support.group Support {
-  is_public = true
-  name = "Support"
-  description = ""
-  default = true
-  deleted = false
-}
